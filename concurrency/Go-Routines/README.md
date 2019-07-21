@@ -30,3 +30,26 @@ go run with-GR/goroutines.go
 ```
  go run waitgroups/wg.go
 ```
+
+# Race Conditions
+
+- A race condition occurs when two or more operations must execute in the correct order, but the program somehow does not maintain that guarantee.
+
+- Where one concurrent operation attempts to read a variable while at some undetermined time another concurrent operation is attempting to write to the same vairable. This is called a data race.
+
+
+- To check if a race condition occurs
+```
+go run -race Go-Routines/race-conditions/rc.go 
+```
+
+
+# MUTEX 
+
+- Mutex stands for mutually exclusive or mutual exclusion object. It is a program that is created so that multiple program thread can take turns sharing the same resource. 
+
+- Mutex helps solve multi-threading problems.
+
+```
+go run -race concurrency/Go-Routines/mutex/mutex.go
+```
